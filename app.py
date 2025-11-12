@@ -8,16 +8,22 @@ from nltk.stem.porter import PorterStemmer
 # Initialize stemmer once
 ps = PorterStemmer()
 
-# Download required NLTK data
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+# Download required NLTK data with proper error handling
+@st.cache_resource
+def download_nltk_data():
+    """Download required NLTK data on first run"""
+    try:
+        nltk.data.find('tokenizers/punkt_tab')
+    except LookupError:
+        nltk.download('punkt_tab', quiet=True)
+    
+    try:
+        nltk.data.find('corpora/stopwords')
+    except LookupError:
+        nltk.download('stopwords', quiet=True)
 
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords')
+# Download NLTK data
+download_nltk_data()
 
 # Load models efficiently with caching
 @st.cache_resource
