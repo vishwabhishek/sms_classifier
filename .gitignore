@@ -1,0 +1,80 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/cache/
+
+# NLTK Data (optional - only if you don't want to track)
+# nltk_data/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environment files
+.env.local
+.env.*.local
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# Build artifacts
+*.pkl.bak
+*.pickle.bak
+
+# Node modules (if using any frontend tools)
+node_modules/
+npm-debug.log
